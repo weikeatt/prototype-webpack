@@ -1,0 +1,16 @@
+.card2-wrapper
+  .content
+    a(href="#/hero").btn Back to Dashboard
+    .quote
+      h2.quote-title Vision & Strategy
+      p.quote-body
+        | "Empowering individuals begins with redefining what leadership looks like. At the heart of our journey lies a deep commitment to values that inspire and elevate every voice."
+      a.btn.relative Learn More
+    ul.selector
+      li(class=activeCard === 'card1' ? 'active' : '')
+        a(href="#/cards/card1") Leadership Message
+      li(class=activeCard === 'card2' ? 'active' : '')
+        a(href="#/cards/card2") Vision & Strategy
+  .block 
+    .card-block
+      img(src=require("../../assets/header-bg.png"), alt="background")

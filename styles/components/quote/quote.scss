@@ -1,0 +1,26 @@
+.quote {
+  padding-left: 1.5rem;
+  background-color: transparent;
+  color: white;
+  min-height: 16rem;
+
+  .quote-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .title-red{
+    color: red;
+  }
+
+  .quote-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .body-black {
+    color :black;
+  }
+}

@@ -1,0 +1,33 @@
+.selector {
+  padding-left: 1.5rem;
+  list-style: none;
+  width: 300px;
+
+  // Default color fallback (can be removed if not needed)
+  color: white;
+
+  li {
+    margin: 1rem 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &.active {
+      font-weight: bold;
+      border-left: 3px solid currentColor;
+      padding-left: 0.5rem;
+    }
+  }
+
+  // Modifier for black text
+  &.red {
+    color: red;
+  }
+
+  // Modifier for white text
+  &.white {
+    color: white;
+  }
+}

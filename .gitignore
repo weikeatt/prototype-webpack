@@ -1,0 +1,11 @@
+# Ignore node.js dependencies
+node_modules/
+
+# Ignore Webpack build output
+dist/
+
+# Optional: OS & editor-specific
+.DS_Store
+*.log
+.env
+.vs

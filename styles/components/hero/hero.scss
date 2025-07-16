@@ -1,0 +1,258 @@
+$red: #e53e3e;
+$dark-red: #c53030;
+$font-stack: 'Arial', sans-serif;
+$text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+.hero-section-image{
+  display: flex;
+  flex-direction: column;
+  clip-path: ellipse(94.5% 180% at 0% 50%);
+  position:relative ;
+  padding-top: 10px;
+  justify-content: start;
+  align-items: left;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  scale: 1.1;
+  overflow: hidden;
+  background: white;
+  padding-left: 2rem;
+  flex: 4;
+}
+
+.hero-image{
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-block-circle{
+  position: relative;
+  flex: 1;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.circle-space{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
+  background: transparent;
+  z-index: 2;
+}
+
+.dot-scroll{
+  position: absolute;
+  z-index: 5;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+.hero-section-overlay{
+  display: flex;
+  flex-direction: column;
+  clip-path: ellipse(95.3% 200% at 0% 50%);
+  position:absolute ;
+  justify-content: start;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  scale: 1.1;
+  overflow: hidden;
+  background: red;
+  opacity: 0.1;
+  padding-left: 5rem;
+  flex: 4;
+}
+
+.top-wrapper,
+.bottom-wrapper {
+  position: relative;
+  z-index: 3;
+  display: flexbox;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  padding-top: 3rem;
+  padding-left: 8rem;
+  justify-content: left;
+
+}
+
+.hero-quote-section {
+  position: relative;
+  color: white;
+  max-width: 700px;
+  text-shadow: $text-shadow;
+  padding: 0 4rem;
+  z-index: 5;
+
+  .quote-mark {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    fill: $red;
+    z-index: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    font-size: 4rem;
+    color: $red;
+    font-weight: bold;
+    line-height: 1;
+    font-family: Georgia, serif;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    &:has(svg) {
+      font-size: 0;
+    }
+
+    &.opening {
+      top: 0;
+      left: 0;
+      transform: rotate(180deg);
+    }
+
+    &.closing {
+      bottom: 0;
+      right: 0;
+      transform: rotate(0deg);
+    }
+  }
+
+  .quote-text {
+    z-index: 2;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    margin: 0 5%;
+    font-weight: 700;
+    text-shadow: $text-shadow;
+    text-align: justify;
+  }
+}
+
+.executives {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0;
+  color: white;
+  text-shadow: $text-shadow;
+
+  .executive {
+    .name {
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: white;
+      text-shadow: $text-shadow;
+    }
+
+    .title {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      font-weight: 300;
+      color: white;
+      text-shadow: $text-shadow;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-section-image {
+    min-height: 100vh;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: relative;
+    background: white;
+    scale: 1;
+  }
+
+  .hero-image {
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    scale: 1.1;
+  }
+
+  .hero-block-circle,
+  .circle-space,
+  .dot-scroll {
+    display: none !important;
+  }
+
+  .hero-section-overlay {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    scale: 1;
+    opacity: 0.1;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    z-index: 1;
+  }
+
+  .top-wrapper,
+  .bottom-wrapper {
+    margin-left: 0;
+    padding: 2rem;
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+  }
+
+  .hero-quote-section {
+    padding: 0.5rem;
+    max-width: 100vw;
+    .quote-text {
+      font-size: 1.1rem;
+      margin: 2;
+      text-align: left;
+    }
+    .quote-mark {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .executives {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    .executive .name {
+      font-size: 1rem;
+    }
+    .executive .title {
+      font-size: 0.85rem;
+    }
+  }
+}

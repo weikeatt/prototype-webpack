@@ -1,0 +1,83 @@
+
+@use 'components/hero/hero';
+@use './components/button/button';
+@use './components/card/card';
+@use './components/quote/quote';
+@use './components/selector/selector';
+@use './components/circle/circle';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #881c1c;
+}
+ 
+.card1-wrapper,
+.card2-wrapper {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.hero-wrapper{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.light{
+  background: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-left: 3rem;
+  gap: 4rem;
+  height: 100%;
+  width: 100%;
+  flex: 3;
+
+}
+
+.block {
+  overflow: hidden;
+  flex: 5;
+  height: 100%;
+  width: 60%;
+}
+
+
+@media (max-width: 1023px) {
+
+  .content{
+    padding: 1rem;
+    padding-top: 6rem;
+    flex: 1;
+    gap: 2rem;
+  }
+
+  .block{
+    display: none;
+  }
+
+}

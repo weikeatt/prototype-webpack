@@ -1,0 +1,14 @@
+.card-block {
+  display: flex;
+  flex-direction: row;
+  clip-path: ellipse(95% 100% at 100% 50%);
+  position:relative ;
+  justify-content: start;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+  scale: 1.1;
+  background: white;
+  padding-left: 2rem;
+}
+
