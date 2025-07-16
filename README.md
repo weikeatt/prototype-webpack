@@ -59,7 +59,7 @@ This project showcases a responsive UI component library for Prototype, featurin
 2. **Install Dev Dependencies**
 
    ```bash
-   npm install --save-dev webpack webpack-cli webpack-dev-server pug pug-loader html-webpack-plugin copy-webpack-plugin sass sass-loader css-loader style-loader
+   npm install --save-dev webpack webpack-cli webpack-dev-server pug pug-loader html-webpack-plugin copy-webpack-plugin sass sass-loader css-loader style-loader css-minimizer-webpack-plugin mini-css-extract-plugin
    ```
 
 3. **Create File Structure**
